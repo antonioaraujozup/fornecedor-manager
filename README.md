@@ -1,10 +1,6 @@
-# Fornecedores Manager
+# fornecedor-manager
+API REST para cadastro de fornecedores.
 
-O objetivo deste projeto é que as atividades do `Treinamento de CRUD e Relacionamentos` 
+O objetivo deste projeto é a construção de uma API REST para cadastro de fornecedores, utilizando stack Spring Boot, Data JPA, Validation e Web.
 
-## Dicas
-
-1. Baixe ou Clone este projeto em um local em sua maquina, onde você possa continuar com este codigo, pois existem mais de uma atividade que o utiliza como base.
-2. Importe na sua IDE Favorita, caso não conheça sobre o IDE Java, recomendo o uso do IntelliJ Comunity.
-3. Siga a descrição da atividade que estiver fazendo para construção da funcionalidade pedida.
-4. Qualquer Duvida entre em contato com o Time de Mentores da Zup Edu.
+Projeto realizado na atividade preparatória `Cadastrando um novo telefone para um Contato`, da seção `Cadastro básico com relacionamento Muitos-para-Um` do treino `CRUD e Relacionamentos com Java, Spring Boot e JPA/Hibernate`.
