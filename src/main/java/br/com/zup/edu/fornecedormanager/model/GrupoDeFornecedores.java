@@ -6,6 +6,7 @@ import java.util.List;
 
 @Entity
 public class GrupoDeFornecedores {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -13,8 +14,7 @@ public class GrupoDeFornecedores {
     @Column(nullable = false)
     private String produto;
 
-
-    @OneToMany
+    @OneToMany(cascade = { CascadeType.PERSIST, CascadeType.REMOVE }, mappedBy = "grupo")
     private List<Fornecedor> fornecedores= new ArrayList<>();
 
     public GrupoDeFornecedores(String produto) {
@@ -26,5 +26,14 @@ public class GrupoDeFornecedores {
      */
     @Deprecated
     public GrupoDeFornecedores() {
+    }
+
+    public void adicionaFornecedor(Fornecedor novoFornecedor) {
+        novoFornecedor.setGrupo(this);
+        this.fornecedores.add(novoFornecedor);
+    }
+
+    public Long getId() {
+        return id;
     }
 }

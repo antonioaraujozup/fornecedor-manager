@@ -5,6 +5,7 @@ import java.time.LocalDateTime;
 
 @Entity
 public class Fornecedor {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -17,6 +18,9 @@ public class Fornecedor {
 
     @Column(nullable = false)
     private String empresa;
+
+    @ManyToOne(optional = false)
+    private GrupoDeFornecedores grupo;
 
     public LocalDateTime criadoEm=LocalDateTime.now();
 
@@ -36,5 +40,9 @@ public class Fornecedor {
 
     public Long getId() {
         return id;
+    }
+
+    public void setGrupo(GrupoDeFornecedores grupo) {
+        this.grupo = grupo;
     }
 }
